@@ -4,6 +4,7 @@
 1. To install the dependencies, you will need to use 'npm install' from your terminal.
 2. After installation is finished use 'ng serve' to run the app.
 3. Then open your browser and go to http://localhost:4200
+4. More details on the project README: https://github.com/alfonso1003/angular_subnet_ui/blob/master/cidr/README.md
 
 ### Packages used:
 * Angular-CLI - to build the app
