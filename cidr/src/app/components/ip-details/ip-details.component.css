@@ -1,0 +1,29 @@
+hr {
+    margin-top: 15px;
+}
+.ip-details {
+    padding: 1.7rem 2rem;
+    margin: 2rem 1rem 0 0;
+    border: 1px solid #cecece;
+    border-radius: 12px;  
+    background: #fff; 
+}
+.ip {
+    margin-top: 0;
+    font-weight: bold;
+}
+.ip-details ul {
+    padding: 0;
+}
+.ip-details ul > li {
+    list-style: none;
+}
+
+#full {
+  display: flex;
+  flex-direction: column;
+}
+
+#someid {
+  flex-grow: 1;
+}

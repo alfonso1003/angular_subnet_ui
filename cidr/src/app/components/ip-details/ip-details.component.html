@@ -1,0 +1,19 @@
+<div class="ip-details" *ngIf="ipAddress">
+  <!-- IP Address -->
+  <h1 class="ip">{{ ipAddress }}</h1>
+  <hr>
+  <!-- IP Details -->
+  <ul>
+    <li class="cidr"><strong>CIDR block:</strong> {{ ipClass }}</li>
+    <ng-container *ngIf="cidrInfo">
+      <li class="ip-range"><span>IP Range (network - broadcast): </span> {{ cidrInfo.ip_range }}</li>
+      <li class="subnet-mask"><span>Subnet Mask:</span> {{ cidrInfo.subnet_mask }}</li>
+      <li class="ip-quantity"><span>IP Quantity:</span> {{ cidrInfo.ip_quantity }}</li>
+      <li class="hostname"><span>Hostname:</span> {{ cidrInfo.hostname }}</li>
+    </ng-container>
+  </ul>
+</div>
+<!-- No Seletion -->
+<div class="row" *ngIf="!ipAddress">
+  <div class="col-sm-12 text-center">Please select an IP from the left panel.</div>
+</div>

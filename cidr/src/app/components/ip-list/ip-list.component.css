@@ -1,0 +1,66 @@
+.list {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    right: 50%;
+    overflow-y: scroll;
+    padding: 1.7rem 2rem;
+    margin: 2rem 1rem 2rem 2rem;
+    border-radius: 6px;
+    border: 1px solid #cecece;
+    background: #fff
+}
+.list > ul {
+    padding: 0;
+    line-height: 35px;
+}
+.list > ul > li {
+    list-style: none;
+    line-height: 20px;
+    position: relative;
+}
+.list ul li > ul {
+    margin-bottom: 1rem;
+}
+.cidr-name,
+.ip-address {
+    cursor: pointer;
+}
+.cidr-name > strong {
+    font-size: 1.7rem;
+    line-height: 3rem;
+    padding-left: 3rem;
+}
+.cidr-name > ul {
+    margin-left: 1rem;
+}
+.cidr-name > ul > li.active {
+    text-decoration: underline;
+}
+.cidr-name > ul  {
+    display: none;
+}
+.cidr-name.active > ul {
+    display: block;
+}
+/* ICONS */
+.cidr-name > i {
+    padding: 0.4rem 0.5rem;
+    margin-right: 1rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
+    position: absolute;
+    top: 4px;
+}
+/* ICON TOGGLES */
+.cidr-name > i.fa-minus {
+    display: none;
+}
+.cidr-name.active > i.fa-minus {
+    display: inline-block;
+}
+.cidr-name.active > i.fa-plus {
+    display: none;
+}

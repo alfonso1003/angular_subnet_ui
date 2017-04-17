@@ -1,0 +1,13 @@
+<div class="list">
+  <ul>
+    <!-- CIDR List -->
+    <li *ngFor="let cidr of cidrs" class="cidr-name" [class.active]="cidr.isShowDetails">
+      <i class="glyphicon" [class.glyphicon-minus]="cidr.isShowDetails" [class.glyphicon-plus]="!cidr.isShowDetails" aria-hidden="true" (click)="toggleIps(cidr)"></i>
+      <strong (click)="toggleIps(cidr)">{{ cidr.ip_class }}</strong>
+      <!-- IP List -->
+      <ul *ngIf="cidr.isShowDetails">
+        <li *ngFor="let ip of cidr.cidr_info" class="ip-address" [routerLink]="['/', cidr.ip_class, ip.ip_address]">{{ ip.ip_address }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
